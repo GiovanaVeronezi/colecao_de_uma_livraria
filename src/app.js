@@ -15,8 +15,7 @@ conexao.once("open", () => {
 const app = express();
 app.use(express.json()); //registra um middleware do Express que interpreta requisições com corpo JSON e disponibiliza os dados em req.body
 
-app.get("/", (req, res) => {
-  // quando for feita uma req get pra o caminho com /, execute o código
+app.get("/", (req, res) => {// quando for feita uma req get pra o caminho com /, execute o código
   res.status(200).send("Curso de node.js");
 });
 
@@ -25,11 +24,10 @@ app.get("/livros", async (req, res) => {
   res.status(200).json(listaLivros);
 });
 
-app.get("/livros/:id", (req, res) => {
-  const index = buscaLivro(req.params.id); //captura o valor do id que foi passado na url
-  res.status(200).json(livros[index]); //  acessa o livro naquela posição do array
+app.get("/livros/:id", async (req,res)=>{
+  const livroEncontrado = await livro.findById(req.params.id);
+  res.status(200).json(livroEncontrado);
 });
-
 
 app.post("/livros", async (req, res) => {
   const novoLivro = new livro(req.body);
@@ -37,16 +35,28 @@ app.post("/livros", async (req, res) => {
   res.status(201).json(novoLivro);
 });
 
-app.put("/livros/:id", (req, res) => {
-  const index = buscaLivro(req.params.id);
-  livros[index].titulo = req.body.titulo;
-  res.status(200).json(livros);
+app.put("/livros/:id", async(req,res)=>{
+
+ const livroAtualizado = await livro.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {new:true}
+ );
+
+ res.status(200).json(livroAtualizado);
+
 });
 
-app.delete("/livros/:id", (req, res) => {
-  const index = buscaLivro(req.params.id);
-  livros.splice(index, 1); //metodo de array que localiza um elemento do array e o deleta através do índice com 1 elemento
-  res.status(200).send("Livro removido com sucesso");
+app.put("/livros/:id", async(req,res)=>{
+
+ const livroAtualizado = await livro.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {new:true}
+ );
+
+ res.status(200).json(livroAtualizado);
+
 });
 
 export default app;
