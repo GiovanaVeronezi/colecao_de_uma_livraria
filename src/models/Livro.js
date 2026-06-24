@@ -8,6 +8,6 @@ const livroSchema = new mongoose.Schema({
     paginas: {type: Number}
 }, {versionKey: false});    
 
-const livro = mongoose.model("livros", livroSchema); // criei a variavel livro e ela recebe um model chamado livro que busca e salva dados do livroschema
+const livro = mongoose.model("livros", livroSchema); // criei a variavel livro e ela recebe um model chamado livros que busca e salva dados do livroschema
 
 export default livro;
