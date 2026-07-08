@@ -2,8 +2,6 @@ import express from "express";
 import conectaNaDataBase from "./config/dbConnect.js";
 import routes from "./routes/index.js"
 
-
-
 const conexao = await conectaNaDataBase(); 
 
 conexao.on("error", (erro) => {
@@ -15,7 +13,8 @@ conexao.once("open", () => {
 });
 
 const app = express();
-routes(app);
+routes(app); //Execute a função chamada routes e entregue o objeto app para ela
+
 
 
 export default app;
