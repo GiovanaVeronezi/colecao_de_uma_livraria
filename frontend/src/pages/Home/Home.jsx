@@ -1,40 +1,37 @@
-import "./Home.css";
-import Card from "../../components/Card/Card";
+import { useState } from "react";
 
-function Home() {
-  return (
-    <main className="home">
 
-      <section className="hero">
+function App() {
 
-        <h2>Bem-vinda ao Sistema da Biblioteca</h2>
+const [contador, setContador] = useState(0);
 
-        <p>
-          Gerencie livros e autores de forma rápida e organizada.
-        </p>
 
-      </section>
+return(
+<div>
 
-      <section className="cards">
+<h1>
+Contador: {contador}
+</h1>
 
-        <Card
-          icone="📚"
-          titulo="Livros"
-          descricao="Cadastre, edite e exclua livros."
-          botao="Acessar"
-        />
 
-        <Card
-          icone="👤"
-          titulo="Autores"
-          descricao="Gerencie todos os autores."
-          botao="Acessar"
-        />
+<button 
+onClick={() => setContador(contador + 1)}
+>
+Aumentar
+</button>
 
-      </section>
 
-    </main>
-  );
+<button 
+onClick={() => setContador(contador - 1)}
+>
+Diminuir
+</button>
+
+
+</div>
+)
+
 }
 
-export default Home;
+
+export default App;
