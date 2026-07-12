@@ -1,4 +1,5 @@
 import "./Home.css";
+import Card from "../../components/Card/Card";
 
 function Home() {
   return (
@@ -11,6 +12,24 @@ function Home() {
         <p>
           Gerencie livros e autores de forma rápida e organizada.
         </p>
+
+      </section>
+
+      <section className="cards">
+
+        <Card
+          icone="📚"
+          titulo="Livros"
+          descricao="Cadastre, edite e exclua livros."
+          botao="Acessar"
+        />
+
+        <Card
+          icone="👤"
+          titulo="Autores"
+          descricao="Gerencie todos os autores."
+          botao="Acessar"
+        />
 
       </section>
 

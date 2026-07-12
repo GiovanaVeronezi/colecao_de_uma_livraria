@@ -1,0 +1,61 @@
+.card{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    width:280px;
+
+    box-shadow:0px 5px 15px rgba(0,0,0,.1);
+
+    text-align:center;
+
+}
+
+.card h2{
+
+    font-size:40px;
+
+}
+
+.card h3{
+
+    color:#5b21b6;
+
+    margin:15px 0;
+
+}
+
+.card p{
+
+    color:#666;
+
+    margin-bottom:20px;
+
+}
+
+.card button{
+
+    background:#5b21b6;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.card button:hover{
+
+    background:#4c1d95;
+
+}
