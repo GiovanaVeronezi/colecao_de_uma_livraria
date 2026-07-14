@@ -1,19 +1,35 @@
 import "./Card.css";
 
-function Card(props) {
-  return (
-    <div className="card">
+function Card({ titulo, editora, preco, paginas, editar, excluir }) {
 
-      <h2>{props.icone}</h2>
+    return (
 
-      <h3>{props.titulo}</h3>
+        <div className="card">
 
-      <p>{props.descricao}</p>
+            <h2>{titulo}</h2>
 
-      <button>{props.botao}</button>
+            <p>Editora: {editora}</p>
 
-    </div>
-  );
-}
+            <p>Preço: R$ {preco}</p>
 
+            <p>Páginas: {paginas}</p>
+
+            <button onClick={editar}>
+        Editar
+    </button>
+
+    <button onClick={excluir}>
+        Excluir
+    </button>
+
+        </div>
+        
+
+    );
+
+
+    
+  }
+
+  
 export default Card;

@@ -1,0 +1,44 @@
+.navbar {
+
+    height:70px;
+
+    background:#6a0dad;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 40px;
+
+}
+
+
+.navbar h2 {
+
+    color:white;
+
+}
+
+
+
+.navbar a {
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:25px;
+
+    font-size:18px;
+
+}
+
+
+
+.navbar a:hover {
+
+    text-decoration:underline;
+
+}

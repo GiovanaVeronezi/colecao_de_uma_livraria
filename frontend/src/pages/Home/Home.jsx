@@ -1,37 +1,27 @@
-import { useState } from "react";
+import "./Home.css";
 
 
-function App() {
+function Home(){
 
-const [contador, setContador] = useState(0);
+    return (
 
+        <div className="home">
 
-return(
-<div>
-
-<h1>
-Contador: {contador}
-</h1>
+            <h1>
+                Biblioteca Virtual
+            </h1>
 
 
-<button 
-onClick={() => setContador(contador + 1)}
->
-Aumentar
-</button>
+            <p>
+                Gerencie seus livros e autores de forma simples.
+            </p>
 
 
-<button 
-onClick={() => setContador(contador - 1)}
->
-Diminuir
-</button>
+        </div>
 
-
-</div>
-)
+    );
 
 }
 
 
-export default App;
+export default Home;

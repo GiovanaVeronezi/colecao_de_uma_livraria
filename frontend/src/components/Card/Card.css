@@ -1,61 +1,53 @@
-.card{
+.formulario{
 
-    background:white;
+display:flex;
 
-    border-radius:12px;
+flex-direction:column;
 
-    padding:25px;
+align-items:center;
 
-    width:280px;
+gap:15px;
 
-    box-shadow:0px 5px 15px rgba(0,0,0,.1);
-
-    text-align:center;
+margin-bottom:40px;
 
 }
 
-.card h2{
 
-    font-size:40px;
+.formulario input,
+.formulario select{
 
-}
+width:300px;
 
-.card h3{
+padding:10px;
 
-    color:#5b21b6;
+border-radius:8px;
 
-    margin:15px 0;
-
-}
-
-.card p{
-
-    color:#666;
-
-    margin-bottom:20px;
+border:1px solid #ccc;
 
 }
 
-.card button{
 
-    background:#5b21b6;
+.formulario button{
 
-    color:white;
+padding:10px 20px;
 
-    border:none;
+background-color:#6a0dad;
 
-    padding:12px 25px;
+color:white;
 
-    border-radius:8px;
+border:none;
 
-    cursor:pointer;
+border-radius:8px;
 
-    transition:.3s;
+cursor:pointer;
 
 }
 
-.card button:hover{
 
-    background:#4c1d95;
+.mensagem{
+
+color:green;
+
+font-weight:bold;
 
 }
