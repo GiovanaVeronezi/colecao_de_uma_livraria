@@ -5,9 +5,11 @@ const livroSchema = new mongoose.Schema({
     titulo: { type: String, required: true },
     editora: {type: String },
     preco: {type: Number},
-    paginas: {type: Number}
+    paginas: {type: Number},
+    autor: { type: String }
 }, {versionKey: false});    
 
 const livro = mongoose.model("livros", livroSchema); // criei a variavel livro e ela recebe um model chamado livros que busca e salva dados do livroschema
 
 export default livro;
+
