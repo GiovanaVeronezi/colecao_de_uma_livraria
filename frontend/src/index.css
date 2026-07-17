@@ -1,5 +1,37 @@
-* {  
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(12, 74, 110, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(79, 70, 229, 0.14),
+      transparent 28%
+    ),
+    #f4d6fc;
+  color: #142033;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: transparent;
+}
+
+a {
+  color: inherit;
 }
