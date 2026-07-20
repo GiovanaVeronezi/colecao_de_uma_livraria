@@ -350,10 +350,15 @@ function Livros() {
       </section>
 
       {alerta && (
-        <Alert variant={alerta.variant} className="mt-4">
-          {alerta.text}
-        </Alert>
-      )}
+  <Alert
+    variant={alerta.variant}
+    className="alerta-personalizado"
+    dismissible
+    onClose={() => setAlerta(null)}
+  >
+    {alerta.text}
+  </Alert>
+)}
 
       <section className="livros-card">
         <div className="f4d6fc">

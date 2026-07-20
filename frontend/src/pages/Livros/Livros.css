@@ -38,10 +38,30 @@
 }
 
 .livros-hero__button {
+  background-color: #55065e;
+  border-color: #55065e;
+  color: #fff;
+
   min-width: 150px;
   border-radius: 999px;
   padding-inline: 20px;
   font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.livros-hero__button:hover,
+.livros-hero__button:focus,
+.livros-hero__button:active,
+.livros-hero__button:focus-visible {
+  background-color: #6d0878 !important;
+  border-color: #6d0878 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+.livros-hero__button:not(:disabled):not(.disabled):active {
+  background-color: #4a0552 !important;
+  border-color: #4a0552 !important;
 }
 
 .livros-card {
@@ -152,4 +172,14 @@
   .livros-page {
     padding-top: 20px;
   }
+}
+
+.alerta-personalizado {
+  background-color: #55065e;
+  border-color: #55065e;
+  color: white;
+}
+
+.alerta-personalizado .btn-close {
+  filter: invert(1);
 }
